@@ -13,7 +13,7 @@
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#skills">Expertise</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
@@ -24,7 +24,7 @@
   <!-- Hero Section -->
   <section id="hero">
     <h1>Asmita Dhage</h1>
-    <p>Data Engineer | Azure, Databricks, Python | Driving scalable cloud data solutions</p>
+    <p>Data Engineer | Azure, Databricks, Python | Building scalable cloud data solutions</p>
     <p>Chicago, IL | <a href="mailto:asmita.dhage@hotmail.com">asmita.dhage@hotmail.com</a> | 
        <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">LinkedIn</a> | 
        <a href="https://github.com/AsmitaDhage" target="_blank">GitHub</a>
@@ -37,21 +37,21 @@
     <p>Data Engineer with 8+ years of experience designing and optimizing scalable ETL pipelines and cloud-based data platforms. Expert in Azure, Databricks, Synapse, Python, SQL, and Snowflake. Proven track record delivering measurable business impact through automation, monitoring, and cloud best practices.</p>
   </section>
 
-  <!-- Skills -->
+  <!-- Areas of Expertise -->
   <section id="skills">
-  <h2>Areas of Expertise</h2>
-  <div class="expertise-grid">
-    <div class="expertise-item">Data Pipeline Development & ETL/ELT Optimization</div>
-    <div class="expertise-item">Cloud Data Platforms: Azure, AWS, GCP</div>
-    <div class="expertise-item">Data Modeling & Warehousing</div>
-    <div class="expertise-item">Medallion Lakehouse Architecture</div>
-    <div class="expertise-item">BI & Analytics: Power BI, Tableau, Looker</div>
-    <div class="expertise-item">CRM & Marketing Data: Salesforce, Dynamics 365</div>
-    <div class="expertise-item">Predictive Analytics & Machine Learning</div>
-    <div class="expertise-item">Data Governance, Monitoring & CI/CD</div>
-  </div>
-</section>
-  
+    <h2>Areas of Expertise</h2>
+    <div class="expertise-grid">
+      <div class="expertise-item">Data Pipeline Development & ETL/ELT Optimization</div>
+      <div class="expertise-item">Cloud Data Platforms: Azure, AWS, GCP</div>
+      <div class="expertise-item">Data Modeling & Warehousing</div>
+      <div class="expertise-item">Medallion Lakehouse Architecture</div>
+      <div class="expertise-item">BI & Analytics: Power BI, Tableau, Looker</div>
+      <div class="expertise-item">CRM & Marketing Data: Salesforce, Dynamics 365</div>
+      <div class="expertise-item">Predictive Analytics & Machine Learning</div>
+      <div class="expertise-item">Data Governance, Monitoring & CI/CD</div>
+    </div>
+  </section>
+
   <!-- Experience -->
   <section id="experience">
     <h2>Professional Experience</h2>
@@ -86,11 +86,10 @@
     </div>
   </section>
 
-  <!-- Projects (GitHub) -->
+  <!-- GitHub Projects -->
   <section id="projects">
     <h2>Projects</h2>
     <div id="github-projects">
-      <!-- GitHub projects will load here -->
       <p>Loading projects...</p>
     </div>
   </section>
@@ -114,7 +113,7 @@
   </section>
 
   <script>
-    // Smooth scrolling for nav links
+    // Smooth scrolling
     document.querySelectorAll('nav a').forEach(anchor => {
       anchor.addEventListener('click', function(e){
         e.preventDefault();
@@ -130,7 +129,7 @@
         container.innerHTML = '';
         data.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
         data.forEach(repo => {
-          if (!repo.fork) { // skip forked repos
+          if (!repo.fork) { // skip forks
             const div = document.createElement('div');
             div.classList.add('card');
             div.innerHTML = `<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
