@@ -22,6 +22,7 @@ nav ul {
   justify-content: center;
   margin: 0;
   padding: 0;
+  flex-wrap: wrap;
 }
 
 nav ul li {
@@ -62,6 +63,7 @@ section {
 
 #hero p {
   font-size: 1.2em;
+  margin: 5px 0;
 }
 
 /* Skills */
@@ -69,6 +71,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .skill {
@@ -77,29 +80,39 @@ section {
   padding: 8px 12px;
   border-radius: 20px;
   font-size: 0.9em;
+  transition: transform 0.2s;
 }
 
-/* Cards for experience */
+.skill:hover {
+  transform: scale(1.1);
+}
+
+/* Cards */
 .card {
   background: #1f1f1f;
   padding: 20px;
   border-radius: 10px;
   margin-bottom: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card h3 {
-  margin-top: 0;
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(26, 115, 232, 0.3);
 }
 
-.card ul {
-  list-style-type: square;
-  padding-left: 20px;
+.card h3 a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.card h3 a:hover {
+  text-decoration: underline;
 }
 
 /* Links */
 a {
   color: #1a73e8;
-  text-decoration: none;
 }
 
 a:hover {
@@ -110,5 +123,6 @@ a:hover {
 @media(max-width: 600px){
   nav ul {
     flex-direction: column;
+    align-items: center;
   }
 }
