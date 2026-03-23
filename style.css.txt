@@ -1,0 +1,114 @@
+/* Global */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #121212;
+  color: #eee;
+}
+
+/* Navbar */
+nav#navbar {
+  position: sticky;
+  top: 0;
+  background: #1f1f1f;
+  padding: 10px 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #eee;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #1a73e8;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Hero */
+#hero {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+#hero p {
+  font-size: 1.2em;
+}
+
+/* Skills */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill {
+  background: #1a73e8;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9em;
+}
+
+/* Cards for experience */
+.card {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+}
+
+.card ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+/* Links */
+a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media(max-width: 600px){
+  nav ul {
+    flex-direction: column;
+  }
+}

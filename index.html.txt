@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asmita Dhage | Data Engineer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav id="navbar">
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Asmita Dhage</h1>
+    <p>Data Engineer | Azure, Databricks, Python | Driving scalable cloud data solutions</p>
+    <p>Chicago, IL | <a href="mailto:asmita.dhage@hotmail.com">asmita.dhage@hotmail.com</a> | 
+       <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">LinkedIn</a>
+    </p>
+  </section>
+
+  <!-- About Me -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Data Engineer with 8+ years of experience designing and optimizing scalable ETL pipelines and cloud-based data platforms. Expert in Azure, Databricks, Synapse, Python, SQL, and Snowflake. Proven track record delivering measurable business impact through automation, monitoring, and cloud best practices.</p>
+  </section>
+
+  <!-- Skills / Expertise -->
+  <section id="skills">
+    <h2>Areas of Expertise</h2>
+    <div class="skills-container">
+      <span class="skill">Python</span>
+      <span class="skill">SQL</span>
+      <span class="skill">Azure</span>
+      <span class="skill">Databricks</span>
+      <span class="skill">Snowflake</span>
+      <span class="skill">ETL/ELT Pipelines</span>
+      <span class="skill">Power BI</span>
+      <span class="skill">Tableau</span>
+      <span class="skill">Machine Learning</span>
+      <span class="skill">CRM Integration</span>
+      <span class="skill">Data Governance</span>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience">
+    <h2>Professional Experience</h2>
+
+    <div class="card">
+      <h3>NielsenIQ | Data Engineer / Revenue Intelligence Analyst</h3>
+      <p><em>Aug 2021 – Nov 2025 | Chicago, IL</em></p>
+      <ul>
+        <li>Led CRM migration from Salesforce to Dynamics 365; rebuilt ETL pipelines with ADF, Synapse, and Databricks.</li>
+        <li>Python workflows reduced duplicates by 87%, improved data quality by 17%, generating $1.2M incremental revenue.</li>
+        <li>Designed Medallion Lakehouse architecture integrating global data, improving scalability by 23%.</li>
+        <li>Developed predictive analytics models (lead scoring, marketing attribution, sales forecasting) increasing lead conversion by 18%.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>University of New Haven | Research Analyst (Data Science)</h3>
+      <p><em>Jan 2020 – May 2021</em></p>
+      <ul>
+        <li>Built end-to-end pipelines integrating CRM, e-commerce, web analytics, and clickstream data with Azure Synapse, Python, SQL, BigQuery, PySpark.</li>
+        <li>Developed recommendation engines and predictive sales forecasting models scaling to millions of transactions.</li>
+        <li>Built NLP pipelines and AI chatbots for customer insights and support automation.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Infostretch | Software Engineer</h3>
+      <p><em>Aug 2016 – Aug 2019 | India</em></p>
+      <ul>
+        <li>Developed ETL workflows and dashboards for healthcare and banking analytics.</li>
+        <li>Optimized Spark/Hive pipelines for large-scale transaction data.</li>
+        <li>Built Power BI/Tableau dashboards for reporting and KPIs.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <ul>
+      <li>MS in Data Science – University of New Haven, CT</li>
+      <li>BEng in Computer Science – University of Pune, India</li>
+      <li>Certifications: Apache Spark, SQL, Tableau, Hadoop, R</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:asmita.dhage@hotmail.com">asmita.dhage@hotmail.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">https://www.linkedin.com/in/asmitadhage/</a></p>
+  </section>
+
+  <script>
+    // Smooth scrolling
+    document.querySelectorAll('nav a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
+</body>
+</html>
