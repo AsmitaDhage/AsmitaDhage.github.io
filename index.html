@@ -15,6 +15,7 @@
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -25,7 +26,8 @@
     <h1>Asmita Dhage</h1>
     <p>Data Engineer | Azure, Databricks, Python | Driving scalable cloud data solutions</p>
     <p>Chicago, IL | <a href="mailto:asmita.dhage@hotmail.com">asmita.dhage@hotmail.com</a> | 
-       <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">LinkedIn</a>
+       <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">LinkedIn</a> | 
+       <a href="https://github.com/AsmitaDhage" target="_blank">GitHub</a>
     </p>
   </section>
 
@@ -35,9 +37,9 @@
     <p>Data Engineer with 8+ years of experience designing and optimizing scalable ETL pipelines and cloud-based data platforms. Expert in Azure, Databricks, Synapse, Python, SQL, and Snowflake. Proven track record delivering measurable business impact through automation, monitoring, and cloud best practices.</p>
   </section>
 
-  <!-- Skills / Expertise -->
+  <!-- Skills -->
   <section id="skills">
-    <h2>Areas of Expertise</h2>
+    <h2>Skills</h2>
     <div class="skills-container">
       <span class="skill">Python</span>
       <span class="skill">SQL</span>
@@ -64,7 +66,7 @@
         <li>Led CRM migration from Salesforce to Dynamics 365; rebuilt ETL pipelines with ADF, Synapse, and Databricks.</li>
         <li>Python workflows reduced duplicates by 87%, improved data quality by 17%, generating $1.2M incremental revenue.</li>
         <li>Designed Medallion Lakehouse architecture integrating global data, improving scalability by 23%.</li>
-        <li>Developed predictive analytics models (lead scoring, marketing attribution, sales forecasting) increasing lead conversion by 18%.</li>
+        <li>Developed predictive analytics models increasing lead conversion by 18%.</li>
       </ul>
     </div>
 
@@ -72,9 +74,8 @@
       <h3>University of New Haven | Research Analyst (Data Science)</h3>
       <p><em>Jan 2020 – May 2021</em></p>
       <ul>
-        <li>Built end-to-end pipelines integrating CRM, e-commerce, web analytics, and clickstream data with Azure Synapse, Python, SQL, BigQuery, PySpark.</li>
-        <li>Developed recommendation engines and predictive sales forecasting models scaling to millions of transactions.</li>
-        <li>Built NLP pipelines and AI chatbots for customer insights and support automation.</li>
+        <li>Built end-to-end pipelines integrating CRM, e-commerce, and clickstream data with Azure Synapse, Python, SQL, BigQuery, PySpark.</li>
+        <li>Developed recommendation engines and predictive models scaling to millions of transactions.</li>
       </ul>
     </div>
 
@@ -84,8 +85,16 @@
       <ul>
         <li>Developed ETL workflows and dashboards for healthcare and banking analytics.</li>
         <li>Optimized Spark/Hive pipelines for large-scale transaction data.</li>
-        <li>Built Power BI/Tableau dashboards for reporting and KPIs.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- Projects (GitHub) -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div id="github-projects">
+      <!-- GitHub projects will load here -->
+      <p>Loading projects...</p>
     </div>
   </section>
 
@@ -104,16 +113,38 @@
     <h2>Contact Me</h2>
     <p>Email: <a href="mailto:asmita.dhage@hotmail.com">asmita.dhage@hotmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/asmitadhage/" target="_blank">https://www.linkedin.com/in/asmitadhage/</a></p>
+    <p>GitHub: <a href="https://github.com/AsmitaDhage" target="_blank">https://github.com/AsmitaDhage</a></p>
   </section>
 
   <script>
-    // Smooth scrolling
+    // Smooth scrolling for nav links
     document.querySelectorAll('nav a').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+      anchor.addEventListener('click', function(e){
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    // Load GitHub projects dynamically
+    fetch('https://api.github.com/users/AsmitaDhage/repos')
+      .then(response => response.json())
+      .then(data => {
+        const container = document.getElementById('github-projects');
+        container.innerHTML = '';
+        data.sort((a,b) => new Date(b.updated_at) - new Date(a.updated_at));
+        data.forEach(repo => {
+          if (!repo.fork) { // skip forked repos
+            const div = document.createElement('div');
+            div.classList.add('card');
+            div.innerHTML = `<h3><a href="${repo.html_url}" target="_blank">${repo.name}</a></h3>
+                             <p>${repo.description || 'No description provided.'}</p>`;
+            container.appendChild(div);
+          }
+        });
+      })
+      .catch(err => {
+        document.getElementById('github-projects').innerHTML = '<p>Unable to load projects.</p>';
+      });
   </script>
 
 </body>
